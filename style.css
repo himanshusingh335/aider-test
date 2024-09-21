@@ -7,6 +7,11 @@ body {
     background-color: #f0f0f0;
 }
 
+@keyframes roll {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
 .container {
     text-align: center;
 }
@@ -21,8 +26,46 @@ button {
     cursor: pointer;
 }
 
-#diceResult {
+#dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
     margin-top: 20px;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: #fff;
     font-size: 24px;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front {
+    transform: translateZ(50px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(50px);
 }
