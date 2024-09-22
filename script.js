@@ -6,6 +6,7 @@ const body = document.body;
 button.addEventListener('click', () => {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
 
+    // Ensure animation is always applied
     dice.style.animation = 'roll 1s ease-out';
 
     setTimeout(() => {
