@@ -30,6 +30,8 @@ button.addEventListener('click', () => {
                 dice.style.transform = 'rotateX(270deg) rotateY(0deg)';
                 break;
         }
+        // Reset animation after it completes
+        dice.style.animation = '';
     }, 1000); 
 });
 
