@@ -1,5 +1,7 @@
 const button = document.getElementById('rollButton');
 const dice = document.getElementById('dice');
+const darkModeToggle = document.getElementById('darkModeToggle');
+const body = document.body;
 
 button.addEventListener('click', () => {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -28,4 +30,13 @@ button.addEventListener('click', () => {
                 break;
         }
     }, 1000); 
+});
+
+darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    if (body.classList.contains('dark-mode')) {
+        darkModeToggle.textContent = 'Light Mode';
+    } else {
+        darkModeToggle.textContent = 'Dark Mode';
+    }
 });

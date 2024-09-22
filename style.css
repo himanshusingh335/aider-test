@@ -5,6 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
 }
 
 @keyframes roll {
@@ -24,6 +25,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 #dice {
@@ -69,4 +71,31 @@ button {
 
 .bottom {
     transform: rotateX(-90deg) translateZ(50px);
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-mode button {
+    background-color: #333;
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #333;
 }
