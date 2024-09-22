@@ -3,11 +3,17 @@ const dice = document.getElementById('dice');
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
+// Load the dice rolling sound
+const diceRollSound = new Audio('dice-roll.mp3');
+
 button.addEventListener('click', () => {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
 
     // Ensure animation is always applied
     dice.style.animation = 'roll 1s ease-out';
+
+    // Play the dice rolling sound
+    diceRollSound.play();
 
     setTimeout(() => {
         switch (randomNumber) {
